@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+}
+
+.main {
+    background-image: url(img/bg.jpg);
+    box-shadow: inset 0px 0px 1000px 61px black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 120vh;
+    position: relative;
+}
+
+.box {
+    background: black;
+    width: 100%;
+    height: 120vh;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 62px;
+    padding: 0 20px;
+}
+
+.left {
+    padding: 23px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.left img {
+    text-shadow: 12px 12px 12px 12px red;
+    position: relative;
+    z-index: 10;
+}
+
+.right {
+    padding: 23px 0;
+    display: flex;
+    column-gap: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.right .first .button {
+    background-color: rgba(23, 23, 23, 0.8);
+    color: white;
+    font-size: 18px;
+    padding: 4px 30px 4px 12px;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.right .second button {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 8px 20px;
+    border: 1px solid red;
+    border-radius: 4px;
+    transition: all ease 0.2s;
+}
+
+.right .second button:active {
+    transform: scale(0.96);
+    background: rgb(233, 1, 1);
+    color: rgb(210, 197, 197);
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.a {
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.b {
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 55px;
+}
+
+.c {
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 55px;
+}
+
+.content .sb {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.content .sb input {
+    background: rgba(23, 23, 23, 0.8);
+    color: white;
+    border: 1px solid rgba(223, 215, 215, 0.5);
+    font-size: 20px;
+    padding: 12px 50px 12px 12px;
+    border-radius: 4px;
+}
+
+.content .sb button {
+    background: red;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+    border: 1px solid red;
+    border-radius: 4px;
+    transition: all ease 0.2s;
+}
+
+.content .sb button:active {
+    background: rgb(233, 1, 1);
+    transform: scale(0.96);
+    color: rgb(210, 197, 197);
+}
+
+.separate {
+    height: 4px;
+    background: gray;
+    position: relative;
+    top: -11vh;
+}
+
+.down {
+    background: black;
+    height: 1000px;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media screen and (max-width: 768px) {
+    .main {
+        height: 100vh;
+    }
+
+    .box {
+        height: 100vh;
+    }
+
+    .a {
+        font-size: 36px;
+    }
+
+    .b, .c {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .content .sb input, .content .sb button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* For mobile phones */
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left, .right {
+        padding: 10px 0;
+    }
+
+    .right {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .a {
+        font-size: 28px;
+    }
+
+    .b, .c {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .content .sb {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .content .sb input, .content .sb button {
+        width: 80%;
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}
